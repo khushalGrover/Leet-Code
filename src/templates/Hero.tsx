@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { Background } from '../background/Background';
+import { BackgroundTilt } from '../background/BackgroundTilt';
 import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
@@ -8,7 +9,7 @@ import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => (
-  <Background color="bg-red-100">
+  <Background color="transpaent">
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
@@ -31,7 +32,9 @@ const Hero = () => (
       </NavbarTwoColumns>
     </Section>
 
-    <Section yPadding="pt-20 pb-32">
+    <BackgroundTilt tiltAngle="skew-y-12" myClass="bg-[#292929] top-0" />
+
+    <Section yPadding="flex flex-col justify-center text-center h-[90vh] ">
       <HeroOneButton
         title={
           <>
@@ -41,12 +44,16 @@ const Hero = () => (
         }
         description="LeetCode is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews."
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
+          <Link href="/">
             <Button xl>Create Account</Button>
           </Link>
         }
       />
     </Section>
+    <BackgroundTilt
+      tiltAngle="-skew-y-12"
+      myClass="bg-[#f7f9fc] z-[-3] top-[110vh]"
+    />
   </Background>
 );
 
