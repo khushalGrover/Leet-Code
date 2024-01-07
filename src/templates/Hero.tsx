@@ -13,21 +13,21 @@ const Hero = () => (
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
-          <Link href="/">
+          <Link href="/#">
             <span className="text-primary-500">Premium</span>
           </Link>
         </li>
         <li>
-          <Link href="/">Explore</Link>
+          <Link href="/#explore">Explore</Link>
         </li>
         <li>
-          <Link href="/">Product</Link>
+          <Link href="/#product">Product</Link>
         </li>
         <li>
-          <Link href="/">Developer</Link>
+          <Link href="/#developer">Developer</Link>
         </li>
         <li>
-          <Link href="/">Sign in</Link>
+          <Link href="/##">Sign in</Link>
         </li>
       </NavbarTwoColumns>
     </Section>
@@ -44,7 +44,7 @@ const Hero = () => (
         }
         description="LeetCode is the best platform to help you enhance your skills, expand your knowledge and prepare for technical interviews."
         button={
-          <Link href="/">
+          <Link href="#" className="w-[200px] flex-none">
             <Button xl>Create Account</Button>
           </Link>
         }
